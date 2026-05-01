@@ -1,0 +1,133 @@
+.calendar-header {
+	display: flex;
+	align-items: center;
+	font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+	justify-content: center;
+	margin-bottom: 2em;
+	min-height: 10vh;
+	text-align: center;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.weekdays-list,
+.day-grid-list {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	margin: 0 auto;
+	max-width: 64em;
+	padding: 0;
+}
+
+.weekday-item,
+.day-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.day-item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+	padding: 5px;
+	cursor: pointer;
+  	user-select: none;
+}
+
+.day-item:hover {
+  background-color: #d0d0d0;
+}
+
+.weekdays-list {
+  	margin-bottom: 1em;
+}
+
+.weekday-item {
+  	height: 4vw;
+}
+
+.day-item {
+	background-color: #fff;
+	border: 2px solid black;
+	height: 12vw;
+	max-height: 125px;
+}
+
+@media (max-width: 576px) {
+  .day-grid-list,
+  .weekdays-list {
+    max-width: 100%;
+  }
+
+  .day-item {
+    font-size: 0.65rem;
+    height: 14vw;
+    max-height: 80px;
+  }
+
+  .weekday-item {
+    height: 6vw; 
+    font-size: 0;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .day-grid-list,
+  .weekdays-list {
+    max-width: 90%;
+  }
+
+  .day-item {
+    font-size: 0.75rem;
+    height: 11vw;
+    max-height: 100px;
+  }
+
+  .weekday-item {
+    height: 5vw;
+    font-size: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .day-grid-list,
+  .weekdays-list {
+    max-width: 80%;
+  }
+
+  .day-item {
+    font-size: 0.85rem;
+    height: 12vw;
+    max-height: 110px;
+  }
+
+  .weekday-item {
+    height: 4vw;
+    font-size: 0;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .day-grid-list,
+  .weekdays-list {
+    max-width: 70%;
+  }
+
+  .day-item {
+    font-size: 0.95rem;
+    height: 12vw;
+    max-height: 125px;
+  }
+
+  .weekday-item {
+    height: 4vw;
+    font-size: 0;
+  }
+
+  .weekday-abbr::after {
+    font-size: 0.95rem;
+  }
+}
